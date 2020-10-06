@@ -5,7 +5,7 @@ import logo from '../../logos/Group 1329.png'
 const Home = () => {
     const [allActivity,setAllActivity]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5500/allActivity')
+        fetch('https://arcane-peak-48991.herokuapp.com/allActivity')
         .then(res=>res.json())
         .then(data=>setAllActivity(data))
     });
@@ -23,7 +23,7 @@ const Home = () => {
                                 <li>Donation</li>
                                 <li>Events</li>
                                 <li className="register">Register</li>
-                                <li className="admin">Admin</li>
+                                <li className="admin"><a href="https://arcane-peak-48991.herokuapp.com/" >admin</a></li>
                             </ul>
                         </div>
                     </div>

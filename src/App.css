@@ -32,6 +32,12 @@
   height: 35px;
   line-height: 35px;
 }
+#home .nav .menu ul li a{
+  cursor: pointer;
+  color: #ddd;
+  text-transform: capitalize;
+  text-decoration: none;
+}
 #home .nav .menu ul .register{
   background: #3F90FC;
   border-radius: 7px;

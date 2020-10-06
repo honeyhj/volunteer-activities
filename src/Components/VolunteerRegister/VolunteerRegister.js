@@ -7,7 +7,7 @@ const VolunteerRegister = () => {
     const [selectedActivity,setSelectedActivity]=useState({});
     const [loggedInUser,setLoggedInUser] = useContext(UserContext)
     useEffect(()=>{
-        fetch('http://localhost:5500/allActivity/'+key)
+        fetch('https://arcane-peak-48991.herokuapp.com/allActivity/'+key)
         .then(res=>res.json())
         .then(data=>setSelectedActivity(data))
     },[])
@@ -15,7 +15,7 @@ const VolunteerRegister = () => {
     return (
         <div className="form">
             <h2>register as a volunteer</h2>
-            <form action="http://localhost:5500/registerActivity" method="POST" >
+            <form action="https://arcane-peak-48991.herokuapp.com/registerActivity" method="POST" >
                 <input type="text" name="name" value={allData.name} placeholder="full name"/>
                 <input type="text" name="email" value={allData.email} placeholder="email"/>
                 <input type="text" name="title" value={allData.title} placeholder="title"/>

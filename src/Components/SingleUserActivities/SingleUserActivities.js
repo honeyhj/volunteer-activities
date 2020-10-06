@@ -7,12 +7,12 @@ const SingleUserActivities = () => {
     
     const [singleUser,setSingleUser]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5500/singleUserActivities?email=' + loggedInUser.email)
+        fetch('https://arcane-peak-48991.herokuapp.com/singleUserActivities?email=' + loggedInUser.email)
         .then(res=>res.json())
         .then(data=>setSingleUser(data))
     },[])
     const handleCancel =(id)=>{
-        fetch(`http://localhost:5500/delete/${id}`,{
+        fetch(`https://arcane-peak-48991.herokuapp.com/delete/${id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())
